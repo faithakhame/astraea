@@ -1,0 +1,13 @@
+# Dependencies (only needed for the optional test tooling)
+node_modules/
+package-lock.json
+
+# Local scratch files and screenshots
+.tmp/
+*.log
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

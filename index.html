@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Astraea — Daily Astrology &amp; Moon Magic</title>
+  <meta name="description" content="Daily astrology readings, compatibility, career and love guidance, relocation insight, live moon tracking, and new &amp; full moon rituals." />
+  <meta name="theme-color" content="#07060f" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='26' fill='%23e8cf9a'/%3E%3Ccircle cx='44' cy='24' r='22' fill='%2307060f'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#today" aria-label="Astraea home">
+      <span class="brand-mark">☾</span>
+      <span class="brand-name">Astraea</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#today" data-view="today">Today</a>
+      <a href="#you" data-view="you">Your Chart</a>
+      <a href="#match" data-view="match">Compatibility</a>
+      <a href="#life" data-view="life">Life Paths</a>
+      <a href="#moon" data-view="moon">Moon</a>
+      <a href="#rituals" data-view="rituals">Rituals</a>
+      <a href="#journal" data-view="journal">Journal</a>
+    </nav>
+    <button class="profile-chip" id="profileChip" type="button">
+      <span class="chip-sigil">✦</span>
+      <span class="chip-text" id="chipText">Set your birth sky</span>
+    </button>
+  </header>
+
+  <main id="app" class="app" tabindex="-1"></main>
+
+  <footer class="footer">
+    <p><span class="foot-mark">☾</span> Astraea is a tool for self-reflection, ritual and delight. It is not medical, legal, or financial advice.</p>
+    <p class="foot-fine">Moon positions are computed astronomically from your clock. Interpretations are poetic, not predictive.</p>
+  </footer>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-backdrop" data-close="modal"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-x" data-close="modal" aria-label="Close">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/astro.js"></script>
+  <script src="js/data-signs.js"></script>
+  <script src="js/data-daily.js"></script>
+  <script src="js/data-rituals.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
